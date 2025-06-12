@@ -159,7 +159,14 @@ class SENIATUploadView extends StatelessWidget {
               ),
 
               // Totales (solo se muestra después de procesar)
-              if (controller.resultados.isNotEmpty) _buildTotalsCard(),
+              Obx(() {
+                if (controller.resultados.isNotEmpty) {
+                  return _buildTotalsCard();
+                } else {
+                  return const SizedBox(); // No mostrar si no hay resultados
+                }
+              }),
+
             ],
           ),
         ),
