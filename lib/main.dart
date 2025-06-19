@@ -166,7 +166,6 @@ class SENIATUploadView extends StatelessWidget {
                   return const SizedBox(); // No mostrar si no hay resultados
                 }
               }),
-
             ],
           ),
         ),
